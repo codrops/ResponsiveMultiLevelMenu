@@ -181,33 +181,33 @@ All this is done for any sub-level being entered.
 /* Animation classes for moving out and in */
 
 .dl-menu.dl-animate-out-1 {
-	-webkit-animation: MenuAnimOut1 0.4s linear forwards;
-	-moz-animation: MenuAnimOut1 0.4s linear forwards;
-	animation: MenuAnimOut1 0.4s linear forwards;
+	-webkit-animation: MenuAnimOut1 0.4s;
+	-moz-animation: MenuAnimOut1 0.4s;
+	animation: MenuAnimOut1 0.4s;
 }
 
 .dl-menu.dl-animate-out-2 {
-	-webkit-animation: MenuAnimOut2 0.3s ease-in-out forwards;
-	-moz-animation: MenuAnimOut2 0.3s ease-in-out forwards;
-	animation: MenuAnimOut2 0.3s ease-in-out forwards;
+	-webkit-animation: MenuAnimOut2 0.3s ease-in-out;
+	-moz-animation: MenuAnimOut2 0.3s ease-in-out;
+	animation: MenuAnimOut2 0.3s ease-in-out;
 }
 
 .dl-menu.dl-animate-out-3 {
-	-webkit-animation: MenuAnimOut3 0.4s ease forwards;
-	-moz-animation: MenuAnimOut3 0.4s ease forwards;
-	animation: MenuAnimOut3 0.4s ease forwards;
+	-webkit-animation: MenuAnimOut3 0.4s ease;
+	-moz-animation: MenuAnimOut3 0.4s ease;
+	animation: MenuAnimOut3 0.4s ease;
 }
 
 .dl-menu.dl-animate-out-4 {
-	-webkit-animation: MenuAnimOut4 0.4s ease forwards;
-	-moz-animation: MenuAnimOut4 0.4s ease forwards;
-	animation: MenuAnimOut4 0.4s ease forwards;
+	-webkit-animation: MenuAnimOut4 0.4s ease;
+	-moz-animation: MenuAnimOut4 0.4s ease;
+	animation: MenuAnimOut4 0.4s ease;
 }
 
 .dl-menu.dl-animate-out-5 {
-	-webkit-animation: MenuAnimOut5 0.4s ease forwards;
-	-moz-animation: MenuAnimOut5 0.4s ease forwards;
-	animation: MenuAnimOut5 0.4s ease forwards;
+	-webkit-animation: MenuAnimOut5 0.4s ease;
+	-moz-animation: MenuAnimOut5 0.4s ease;
+	animation: MenuAnimOut5 0.4s ease;
 }
 
 @-webkit-keyframes MenuAnimOut1 {
@@ -337,33 +337,33 @@ All this is done for any sub-level being entered.
 }
 
 .dl-menu.dl-animate-in-1 {
-	-webkit-animation: MenuAnimIn1 0.3s linear forwards;
-	-moz-animation: MenuAnimIn1 0.3s linear forwards;
-	animation: MenuAnimIn1 0.3s linear forwards;
+	-webkit-animation: MenuAnimIn1 0.3s;
+	-moz-animation: MenuAnimIn1 0.3s;
+	animation: MenuAnimIn1 0.3s;
 }
 
 .dl-menu.dl-animate-in-2 {
-	-webkit-animation: MenuAnimIn2 0.3s ease-in-out forwards;
-	-moz-animation: MenuAnimIn2 0.3s ease-in-out forwards;
-	animation: MenuAnimIn2 0.3s ease-in-out forwards;
+	-webkit-animation: MenuAnimIn2 0.3s ease-in-out;
+	-moz-animation: MenuAnimIn2 0.3s ease-in-out;
+	animation: MenuAnimIn2 0.3s ease-in-out;
 }
 
 .dl-menu.dl-animate-in-3 {
-	-webkit-animation: MenuAnimIn3 0.4s ease forwards;
-	-moz-animation: MenuAnimIn3 0.4s ease forwards;
-	animation: MenuAnimIn3 0.4s ease forwards;
+	-webkit-animation: MenuAnimIn3 0.4s ease;
+	-moz-animation: MenuAnimIn3 0.4s ease;
+	animation: MenuAnimIn3 0.4s ease;
 }
 
 .dl-menu.dl-animate-in-4 {
-	-webkit-animation: MenuAnimIn4 0.4s ease forwards;
-	-moz-animation: MenuAnimIn4 0.4s ease forwards;
-	animation: MenuAnimIn4 0.4s ease forwards;
+	-webkit-animation: MenuAnimIn4 0.4s ease;
+	-moz-animation: MenuAnimIn4 0.4s ease;
+	animation: MenuAnimIn4 0.4s ease;
 }
 
 .dl-menu.dl-animate-in-5 {
-	-webkit-animation: MenuAnimIn5 0.4s ease forwards;
-	-moz-animation: MenuAnimIn5 0.4s ease forwards;
-	animation: MenuAnimIn5 0.4s ease forwards;
+	-webkit-animation: MenuAnimIn5 0.4s ease;
+	-moz-animation: MenuAnimIn5 0.4s ease;
+	animation: MenuAnimIn5 0.4s ease;
 }
 
 @-webkit-keyframes MenuAnimIn1 {
@@ -544,33 +544,33 @@ All this is done for any sub-level being entered.
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
-	-webkit-animation: SubMenuAnimIn1 0.4s ease forwards;
-	-moz-animation: SubMenuAnimIn1 0.4s ease forwards;
-	animation: SubMenuAnimIn1 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimIn1 0.4s ease;
+	-moz-animation: SubMenuAnimIn1 0.4s ease;
+	animation: SubMenuAnimIn1 0.4s ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-2 {
-	-webkit-animation: SubMenuAnimIn2 0.3s ease-in-out forwards;
-	-moz-animation: SubMenuAnimIn2 0.3s ease-in-out forwards;
-	animation: SubMenuAnimIn2 0.3s ease-in-out forwards;
+	-webkit-animation: SubMenuAnimIn2 0.3s ease-in-out;
+	-moz-animation: SubMenuAnimIn2 0.3s ease-in-out;
+	animation: SubMenuAnimIn2 0.3s ease-in-out;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-3 {
-	-webkit-animation: SubMenuAnimIn3 0.4s ease forwards;
-	-moz-animation: SubMenuAnimIn3 0.4s ease forwards;
-	animation: SubMenuAnimIn3 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimIn3 0.4s ease;
+	-moz-animation: SubMenuAnimIn3 0.4s ease;
+	animation: SubMenuAnimIn3 0.4s ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
-	-webkit-animation: SubMenuAnimIn4 0.4s ease forwards;
-	-moz-animation: SubMenuAnimIn4 0.4s ease forwards;
-	animation: SubMenuAnimIn4 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimIn4 0.4s ease;
+	-moz-animation: SubMenuAnimIn4 0.4s ease;
+	animation: SubMenuAnimIn4 0.4s ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-in-5 {
-	-webkit-animation: SubMenuAnimIn5 0.4s ease forwards;
-	-moz-animation: SubMenuAnimIn5 0.4s ease forwards;
-	animation: SubMenuAnimIn5 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimIn5 0.4s ease;
+	-moz-animation: SubMenuAnimIn5 0.4s ease;
+	animation: SubMenuAnimIn5 0.4s ease;
 }
 
 @-webkit-keyframes SubMenuAnimIn1 {
@@ -739,33 +739,33 @@ All this is done for any sub-level being entered.
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
-	-webkit-animation: SubMenuAnimOut1 0.4s ease forwards;
-	-moz-animation: SubMenuAnimOut1 0.4s ease forwards;
-	animation: SubMenuAnimOut1 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimOut1 0.4s ease;
+	-moz-animation: SubMenuAnimOut1 0.4s ease;
+	animation: SubMenuAnimOut1 0.4s ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-2 {
-	-webkit-animation: SubMenuAnimOut2 0.3s ease-in-out forwards;
-	-moz-animation: SubMenuAnimOut2 0.3s ease-in-out forwards;
-	animation: SubMenuAnimOut2 0.3s ease-in-out forwards;
+	-webkit-animation: SubMenuAnimOut2 0.3s ease-in-out;
+	-moz-animation: SubMenuAnimOut2 0.3s ease-in-out;
+	animation: SubMenuAnimOut2 0.3s ease-in-out;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-3 {
-	-webkit-animation: SubMenuAnimOut3 0.4s ease forwards;
-	-moz-animation: SubMenuAnimOut3 0.4s ease forwards;
-	animation: SubMenuAnimOut3 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimOut3 0.4s ease;
+	-moz-animation: SubMenuAnimOut3 0.4s ease;
+	animation: SubMenuAnimOut3 0.4s ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
-	-webkit-animation: SubMenuAnimOut4 0.4s ease forwards;
-	-moz-animation: SubMenuAnimOut4 0.4s ease forwards;
-	animation: SubMenuAnimOut4 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimOut4 0.4s ease;
+	-moz-animation: SubMenuAnimOut4 0.4s ease;
+	animation: SubMenuAnimOut4 0.4s ease;
 }
 
 .dl-menuwrapper > .dl-submenu.dl-animate-out-5 {
-	-webkit-animation: SubMenuAnimOut5 0.4s ease forwards;
-	-moz-animation: SubMenuAnimOut5 0.4s ease forwards;
-	animation: SubMenuAnimOut5 0.4s ease forwards;
+	-webkit-animation: SubMenuAnimOut5 0.4s ease;
+	-moz-animation: SubMenuAnimOut5 0.4s ease;
+	animation: SubMenuAnimOut5 0.4s ease;
 }
 
 @-webkit-keyframes SubMenuAnimOut1 {
