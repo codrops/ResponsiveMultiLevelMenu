@@ -23,7 +23,9 @@
 	// the options
 	$.DLMenu.defaults = {
 		// classes for the animation effects
-		animationClasses : { in : 'dl-animate-in-1', out : 'dl-animate-out-1' }
+		animationClasses : { in : 'dl-animate-in-1', out : 'dl-animate-out-1' },
+		onLevelClick : function( el, name ) { return false; },
+		onLinkClick : function( el, ev ) { return false; }
 	};
 
 	$.DLMenu.prototype = {
@@ -111,9 +113,15 @@
 						onAnimationEndFn.call();
 					}
 
+					self.options.onLevelClick( $item, $item.children( 'a:first' ).text() );
+
 					return false;
 
 				}
+				else {
+					self.options.onLinkClick( $item, event );
+				}
+
 			} );
 
 			this.$back.on( 'click.dlmenu', function( event ) {
