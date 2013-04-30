@@ -24,7 +24,11 @@
 	$.DLMenu.defaults = {
 		// classes for the animation effects
 		animationClasses : { in : 'dl-animate-in-1', out : 'dl-animate-out-1' },
+		// callback: click a link that has a sub menu
+		// el is the link element (li); name is the level name
 		onLevelClick : function( el, name ) { return false; },
+		// callback: click a link that does not have a sub menu
+		// el is the link element (li); ev is the event obj
 		onLinkClick : function( el, ev ) { return false; }
 	};
 
