@@ -36,16 +36,14 @@
 				</div>
 				<div class="column">
 					<div id="dl-menu" class="dl-menuwrapper">
-						<button>Open Menu</button>
+						<button class="dl-trigger">Open Menu</button>
 						<ul class="dl-menu">
 							<li>
 								<a href="#">Fashion</a>
 								<ul class="dl-submenu">
-									<li class="dl-back"><a href="#">back</a></li>
 									<li>
 										<a href="#">Men</a>
 										<ul class="dl-submenu">
-											<li class="dl-back"><a href="#">back</a></li>
 											<li><a href="#">Shirts</a></li>
 											<li><a href="#">Jackets</a></li>
 											<li><a href="#">Chinos &amp; Trousers</a></li>
@@ -57,7 +55,6 @@
 									<li>
 										<a href="#">Women</a>
 										<ul class="dl-submenu">
-											<li class="dl-back"><a href="#">back</a></li>
 											<li><a href="#">Jackets</a></li>
 											<li><a href="#">Knits</a></li>
 											<li><a href="#">Jeans</a></li>
@@ -70,7 +67,6 @@
 									<li>
 										<a href="#">Children</a>
 										<ul class="dl-submenu">
-											<li class="dl-back"><a href="#">back</a></li>
 											<li><a href="#">Boys</a></li>
 											<li><a href="#">Girls</a></li>
 										</ul>
@@ -80,7 +76,6 @@
 							<li>
 								<a href="#">Electronics</a>
 								<ul class="dl-submenu">
-									<li class="dl-back"><a href="#">back</a></li>
 									<li><a href="#">Camera &amp; Photo</a></li>
 									<li><a href="#">TV &amp; Home Cinema</a></li>
 									<li><a href="#">Phones</a></li>
@@ -90,11 +85,9 @@
 							<li>
 								<a href="#">Furniture</a>
 								<ul class="dl-submenu">
-									<li class="dl-back"><a href="#">back</a></li>
 									<li>
 										<a href="#">Living Room</a>
 										<ul class="dl-submenu">
-											<li class="dl-back"><a href="#">back</a></li>
 											<li><a href="#">Sofas &amp; Loveseats</a></li>
 											<li><a href="#">Coffee &amp; Accent Tables</a></li>
 											<li><a href="#">Chairs &amp; Recliners</a></li>
@@ -104,11 +97,9 @@
 									<li>
 										<a href="#">Bedroom</a>
 										<ul class="dl-submenu">
-											<li class="dl-back"><a href="#">back</a></li>
 											<li>
 												<a href="#">Beds</a>
 												<ul class="dl-submenu">
-													<li class="dl-back"><a href="#">back</a></li>
 													<li><a href="#">Upholstered Beds</a></li>
 													<li><a href="#">Divans</a></li>
 													<li><a href="#">Metal Beds</a></li>
@@ -129,14 +120,12 @@
 							<li>
 								<a href="#">Jewelry &amp; Watches</a>
 								<ul class="dl-submenu">
-									<li class="dl-back"><a href="#">back</a></li>
 									<li><a href="#">Fine Jewelry</a></li>
 									<li><a href="#">Fashion Jewelry</a></li>
 									<li><a href="#">Watches</a></li>
 									<li>
 										<a href="#">Wedding Jewelry</a>
 										<ul class="dl-submenu">
-											<li class="dl-back"><a href="#">back</a></li>
 											<li><a href="#">Engagement Rings</a></li>
 											<li><a href="#">Bridal Sets</a></li>
 											<li><a href="#">Women's Wedding Bands</a></li>
@@ -155,7 +144,7 @@
 		<script>
 			$(function() {
 				$( '#dl-menu' ).dlmenu({
-					animationClasses : { in : 'dl-animate-in-2', out : 'dl-animate-out-2' }
+					animationClasses : { classin : 'dl-animate-in-2', classout : 'dl-animate-out-2' }
 				});
 			});
 		</script>
