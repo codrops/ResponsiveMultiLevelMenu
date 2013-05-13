@@ -83,7 +83,7 @@
 				else {
 					self._openMenu();
 					// clicking somewhere else makes the menu close
-					$body.off( 'click' ).on( 'click.dlmenu', function() {
+					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
 						self._closeMenu() ;
 					} );
 					
