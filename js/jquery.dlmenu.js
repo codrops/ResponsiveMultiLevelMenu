@@ -97,23 +97,25 @@
 
 				if( $submenu.length > 0 ) {
 
-					var $flyin = $submenu.clone().insertAfter( self.$menu ).addClass( self.options.animationClasses.classin ),
+					var $flyin = $submenu.clone().css( 'opacity', 0 ).insertAfter( self.$menu ),
 						onAnimationEndFn = function() {
 							self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classout ).addClass( 'dl-subview' );
 							$item.addClass( 'dl-subviewopen' ).parents( '.dl-subviewopen:first' ).removeClass( 'dl-subviewopen' ).addClass( 'dl-subview' );
 							$flyin.remove();
 						};
 
-					self.$menu.addClass( self.options.animationClasses.classout );
+					setTimeout( function() {
+						$flyin.addClass( self.options.animationClasses.classin );
+						self.$menu.addClass( self.options.animationClasses.classout );
+						if( self.supportAnimations ) {
+							self.$menu.on( self.animEndEventName, onAnimationEndFn );
+						}
+						else {
+							onAnimationEndFn.call();
+						}
 
-					if( self.supportAnimations ) {
-						self.$menu.on( self.animEndEventName, onAnimationEndFn );
-					}
-					else {
-						onAnimationEndFn.call();
-					}
-
-					self.options.onLevelClick( $item, $item.children( 'a:first' ).text() );
+						self.options.onLevelClick( $item, $item.children( 'a:first' ).text() );
+					} );
 
 					return false;
 
@@ -130,30 +132,31 @@
 					$submenu = $this.parents( 'ul.dl-submenu:first' ),
 					$item = $submenu.parent(),
 
-
-					$flyin = $submenu.clone().insertAfter( self.$menu ).addClass( self.options.animationClasses.classout );
+					$flyin = $submenu.clone().insertAfter( self.$menu );
 
 				var onAnimationEndFn = function() {
 					self.$menu.off( self.animEndEventName ).removeClass( self.options.animationClasses.classin );
 					$flyin.remove();
 				};
 
-				self.$menu.addClass( self.options.animationClasses.classin );
+				setTimeout( function() {
+					$flyin.addClass( self.options.animationClasses.classout );
+					self.$menu.addClass( self.options.animationClasses.classin );
+					if( self.supportAnimations ) {
+						self.$menu.on( self.animEndEventName, onAnimationEndFn );
+					}
+					else {
+						onAnimationEndFn.call();
+					}
 
-				if( self.supportAnimations ) {
-					self.$menu.on( self.animEndEventName, onAnimationEndFn );
-				}
-				else {
-					onAnimationEndFn.call();
-				}
-
-				$item.removeClass( 'dl-subviewopen' );
-				
-				var $subview = $this.parents( '.dl-subview:first' );
-				if( $subview.is( 'li' ) ) {
-					$subview.addClass( 'dl-subviewopen' );
-				}
-				$subview.removeClass( 'dl-subview' );
+					$item.removeClass( 'dl-subviewopen' );
+					
+					var $subview = $this.parents( '.dl-subview:first' );
+					if( $subview.is( 'li' ) ) {
+						$subview.addClass( 'dl-subviewopen' );
+					}
+					$subview.removeClass( 'dl-subview' );
+				} );
 
 				return false;
 
