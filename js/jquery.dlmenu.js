@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
@@ -80,7 +80,7 @@
 				
 				if( self.open ) {
 					self._closeMenu();
-				} 
+				}
 				else {
 					self._openMenu();
 				}
@@ -234,9 +234,9 @@
 				}
 				instance[ options ].apply( instance, args );
 			});
-		} 
+		}
 		else {
-			this.each(function() {	
+			this.each(function() {
 				var instance = $.data( this, 'dlmenu' );
 				if ( instance ) {
 					instance._init();
