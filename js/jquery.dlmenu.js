@@ -107,17 +107,13 @@
 				}
 				else {
 					self._openMenu();
-<<<<<<< HEAD
-=======
 					// clicking somewhere else makes the menu close
 					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
 						self._closeMenu() ;
 					} );
 					
->>>>>>> 1fe71bb65c323c9c6fff6abf1ba0ea0ec1bec9c6
 				}
 				return false;
-
 			} );
 
 			this.$menuitems.on( 'click.dlmenu', function( event ) {
