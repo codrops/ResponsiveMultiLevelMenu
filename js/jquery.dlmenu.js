@@ -62,9 +62,9 @@
 			// animation end event name
 			this.animEndEventName = animEndEventNames[ Modernizr.prefixed( 'animation' ) ] + '.dlmenu';
 			// transition end event name
-			this.transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ] + '.dlmenu',
+			this.transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ] + '.dlmenu';
 			// support for css animations and css transitions
-			this.supportAnimations = Modernizr.cssanimations,
+			this.supportAnimations = Modernizr.cssanimations;
 			this.supportTransitions = Modernizr.csstransitions;
 
 			this._initEvents();
