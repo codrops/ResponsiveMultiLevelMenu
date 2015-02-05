@@ -111,12 +111,12 @@
 					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
 						self._closeMenu() ;
 					} );
-					
+
 				}
 				return false;
 			} );
 
-			this.$menuitems.on( 'click.dlmenu', function( event ) {
+			this.$menu.on( 'click.dlmenu', 'li:not(.dl-back)', function( event ) {
 
 				event.stopPropagation();
 
@@ -156,7 +156,7 @@
 
 			} );
 
-			this.$back.on( 'click.dlmenu', function( event ) {
+			this.$menu.on( 'click.dlmenu', 'li.dl-back', function( event ) {
 
 				var $this = $( this ),
 					$submenu = $this.parents( 'ul.dl-submenu:first' ),
