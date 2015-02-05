@@ -74,13 +74,11 @@
 			this.open = false;
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
-			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">' + this.options.backLabel + '</a></li>' );
-			this.$back = this.$menu.find( 'li.dl-back' );
 
 			// Set the label text for the back link.
 			if (this.options.useActiveItemAsBackLabel) {
-				this.$back.each(function() {
+				this.$menu.find( 'li.dl-back' ).each(function() {
 					var $this = $(this),
 						parentLabel = $this.parents('li:first').find('a:first').text();
 
@@ -238,7 +236,7 @@
 		// resets the menu to its original state (first level of options)
 		_resetMenu : function() {
 			this.$menu.removeClass( 'dl-subview' );
-			this.$menuitems.removeClass( 'dl-subview dl-subviewopen' );
+			this.$menu.find( 'li:not(.dl-back)' ).removeClass( 'dl-subview dl-subviewopen' );
 		}
 	};
 
