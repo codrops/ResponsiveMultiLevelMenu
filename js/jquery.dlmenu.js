@@ -74,6 +74,7 @@
 			this.open = false;
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
+			this.$el.css('z-index', '9999')
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">' + this.options.backLabel + '</a></li>' );
 
 			// Set the label text for the back link.
@@ -214,6 +215,8 @@
 				onTransitionEndFn.call();
 			}
 
+			this.$menu.hide();
+
 			this.open = false;
 		},
 		openMenu : function() {
@@ -223,6 +226,9 @@
 		},
 		_openMenu : function() {
 			var self = this;
+
+			this.$menu.show();
+
 			// clicking somewhere else makes the menu close
 			$body.off( 'click' ).on( 'click.dlmenu', function() {
 				self._closeMenu() ;
