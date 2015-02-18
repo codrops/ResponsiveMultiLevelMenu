@@ -74,6 +74,7 @@
 			this.open = false;
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
+			this.$menu.hide();
 			this.$el.css('z-index', '9999')
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">' + this.options.backLabel + '</a></li>' );
 
