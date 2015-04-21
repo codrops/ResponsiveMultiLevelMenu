@@ -35,7 +35,9 @@
 		useActiveItemAsBackLabel: false,
 		// Change to "true" to add a navigable link to the active item to its child
 		// menu.
-		useActiveItemAsLink: false
+		useActiveItemAsLink: false,
+		// On close reset the menu to root
+		resetOnClose: true
 	};
 
 	$.DLMenu.prototype = {
@@ -111,7 +113,7 @@
 					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
 						self._closeMenu() ;
 					} );
-					
+
 				}
 				return false;
 			} );
@@ -202,7 +204,9 @@
 			var self = this,
 				onTransitionEndFn = function() {
 					self.$menu.off( self.transEndEventName );
-					self._resetMenu();
+					if( self.options.resetOnClose ){
+						self._resetMenu();
+					}
 				};
 
 			this.$menu.removeClass( 'dl-menuopen' );
