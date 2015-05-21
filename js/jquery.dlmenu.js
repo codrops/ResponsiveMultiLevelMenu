@@ -69,6 +69,16 @@
 			this.supportAnimations = Modernizr.cssanimations;
 			this.supportTransitions = Modernizr.csstransitions;
 
+            var ua = navigator.userAgent;
+            var match = ua.match(/Android\s([0-9\.]*)/);
+            if( ua.indexOf("Android") > -1 && ua.indexOf("Chrome") === -1 && ua.indexOf("Firefox") === -1)  {
+                var androidversion = parseFloat(match[1], 10);
+                if (androidversion < 4) {
+                    this.supportAnimations = false;
+                    this.supportTransitions = false;
+                }
+            }
+
 			this._initEvents();
 
 		},
