@@ -7,12 +7,20 @@
     "js/jquery.dlmenu.js",
     "css/component.css"
   ],
-  "dependencies": {
-  },
   "ignore": [
     "index.html",
     "css/default.css",
     "fonts",
-    "images"
-  ]
+    "images",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/rejas/ResponsiveMultiLevelMenu",
+  "authors": [
+    "rejas <github@veeck.de>"
+  ],
+  "license": "MIT"
 }
