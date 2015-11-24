@@ -8,7 +8,7 @@ I changed it to allow for an alternate $trigger (jQuery collection).
 
 I also added onNavOpened() and onNavClosed() callbacks to allow for running code after these events occur.
 
-The example use of this file is contained in index2.html:
+index2.html contains this new use case:
 
     <script>
         $(function() {
