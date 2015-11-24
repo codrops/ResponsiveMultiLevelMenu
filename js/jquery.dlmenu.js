@@ -26,10 +26,12 @@
 		animationClasses : { classin : 'dl-animate-in-1', classout : 'dl-animate-out-1' },
 		// callback: click a link that has a sub menu
 		// el is the link element (li); name is the level name
-		onLevelClick : function( el, name ) { return false; },
+		onLevelClick : function( el, name ) {return false; },
 		// callback: click a link that does not have a sub menu
 		// el is the link element (li); ev is the event obj
-		onLinkClick : function( el, ev ) { return false; },
+		onLinkClick : function( el, ev ) {return false; },
+		onNavOpened : function() {return false; },
+		onNavClosed : function() {return false; },
 		backLabel: 'Back',
 		// Change to "true" to use the active item as back link label.
 		useActiveItemAsBackLabel: false,
@@ -37,7 +39,8 @@
 		// menu.
 		useActiveItemAsLink: false,
 		// On close reset the menu to root
-		resetOnClose: true
+		resetOnClose: true,
+		triggerEl: ""
 	};
 
 	$.DLMenu.prototype = {
@@ -74,7 +77,7 @@
 		},
 		_config : function() {
 			this.open = false;
-			this.$trigger = this.$el.children( '.dl-trigger' );
+			this.$trigger = this.options.triggerEl || this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
 			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">' + this.options.backLabel + '</a></li>' );
@@ -221,6 +224,7 @@
 			}
 
 			this.open = false;
+			self.options.onNavClosed();
 		},
 		openMenu : function() {
 			if( !this.open ) {
@@ -238,6 +242,7 @@
 			} );
 			this.$trigger.addClass( 'dl-active' );
 			this.open = true;
+			self.options.onNavOpened();
 		},
 		// resets the menu to its original state (first level of options)
 		_resetMenu : function() {
