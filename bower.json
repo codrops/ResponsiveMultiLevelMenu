@@ -1,8 +1,10 @@
 {
-  "name": "ResponsiveMultiLevelMenu",
+  "name": "responsivemultilevelmenu",
   "version": "1.0.2",
   "description": "A responsive multi-level menu that shows its submenus in their own context.",
+  "homepage": "https://github.com/rejas/ResponsiveMultiLevelMenu",
   "repository": "https://github.com/rejas/ResponsiveMultiLevelMenu.git",
+  "license": "MIT",
   "main": [
     "js/jquery.dlmenu.js",
     "css/component.css"
@@ -18,9 +20,7 @@
     "test",
     "tests"
   ],
-  "homepage": "https://github.com/rejas/ResponsiveMultiLevelMenu",
   "authors": [
     "rejas <github@veeck.de>"
-  ],
-  "license": "MIT"
+  ]
 }
