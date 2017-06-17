@@ -1,6 +1,5 @@
 /**
- * jquery.dlmenu.js v1.0.1
- * http://www.codrops.com
+ * ResponsiveMultiLevelMenu v1.0.2
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
@@ -69,6 +68,16 @@
 			this.supportAnimations = Modernizr.cssanimations;
 			this.supportTransitions = Modernizr.csstransitions;
 
+            var ua = navigator.userAgent;
+            var match = ua.match(/Android\s([0-9\.]*)/);
+            if( ua.indexOf("Android") > -1 && ua.indexOf("Chrome") === -1 && ua.indexOf("Firefox") === -1)  {
+                var androidversion = parseFloat(match[1], 10);
+                if (androidversion < 4) {
+                    this.supportAnimations = false;
+                    this.supportTransitions = false;
+                }
+            }
+
 			this._initEvents();
 
 		},
@@ -76,13 +85,13 @@
 			this.open = false;
 			this.$trigger = this.$el.children( '.dl-trigger' );
 			this.$menu = this.$el.children( 'ul.dl-menu' );
-			this.$menuitems = this.$menu.find( 'li:not(.dl-back)' );
+            this.$menu.hide();
+            this.$el.css('z-index', '9999');
 			this.$el.find( 'ul.dl-submenu' ).prepend( '<li class="dl-back"><a href="#">' + this.options.backLabel + '</a></li>' );
-			this.$back = this.$menu.find( 'li.dl-back' );
 
 			// Set the label text for the back link.
 			if (this.options.useActiveItemAsBackLabel) {
-				this.$back.each(function() {
+                this.$menu.find( 'li.dl-back' ).each(function() {
 					var $this = $(this),
 						parentLabel = $this.parents('li:first').find('a:first').text();
 
@@ -113,12 +122,11 @@
 					$body.off( 'click' ).children().on( 'click.dlmenu', function() {
 						self._closeMenu() ;
 					} );
-
 				}
 				return false;
 			} );
 
-			this.$menuitems.on( 'click.dlmenu', function( event ) {
+			this.$menu.on( 'click.dlmenu', 'li:not(.dl-back)', function( event ) {
 
 				event.stopPropagation();
 
@@ -158,7 +166,7 @@
 
 			} );
 
-			this.$back.on( 'click.dlmenu', function( event ) {
+            this.$menu.on( 'click.dlmenu', 'li.dl-back', function( event ) {
 
 				var $this = $( this ),
 					$submenu = $this.parents( 'ul.dl-submenu:first' ),
@@ -219,6 +227,7 @@
 			else {
 				onTransitionEndFn.call();
 			}
+            this.$menu.hide();
 
 			this.open = false;
 		},
@@ -229,6 +238,9 @@
 		},
 		_openMenu : function() {
 			var self = this;
+
+            this.$menu.show();
+
 			// clicking somewhere else makes the menu close
 			$body.off( 'click' ).on( 'click.dlmenu', function() {
 				self._closeMenu() ;
@@ -242,7 +254,7 @@
 		// resets the menu to its original state (first level of options)
 		_resetMenu : function() {
 			this.$menu.removeClass( 'dl-subview' );
-			this.$menuitems.removeClass( 'dl-subview dl-subviewopen' );
+            this.$menu.find( 'li:not(.dl-back)' ).removeClass( 'dl-subview dl-subviewopen' );
 		}
 	};
 
